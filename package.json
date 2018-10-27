@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "concurrently \"ng serve\" \"json-server --watch db.json\" ",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
@@ -21,9 +21,16 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "angular2-uuid": "^1.1.1",
     "core-js": "^2.4.1",
-    "rxjs": "^5.5.6",
-    "zone.js": "^0.8.19"
+    "rxjs": "^6.3.3",
+    "rxjs-compat": "^6.3.3",
+    "zone.js": "^0.8.19",
+    "@ngrx/effects" : "6.1.0",
+    "@ngrx/entity" : "6.1.0",
+    "@ngrx/router-store" : "6.1.0",
+    "@ngrx/store" : "5.2.0",
+    "@ngrx/store-devtools" : "6.1.0"
   },
   "devDependencies": {
     "@angular/cli": "1.6.5",

@@ -1,0 +1,25 @@
+<h3>Books</h3>
+<table class="table table-hover">
+  <thead>
+    <tr class="table-primary">
+      <th scope="col">Name</th>
+      <th scope="col">Author</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- <tr>
+      <td colspan="5" class="alert alert-danger" *ngIf="error$ | async as error">{{error}}</td>
+    </tr> -->
+    <tr>
+    <tr *ngFor="let book of (books | async)">
+      <th scope="row">{{book.name}}</th>
+      <td>{{book.author}}</td>
+      <th>
+        <a (click)=editBook(book)>edit</a>
+        <br>
+        <a (click)=deleteBook(book)>delete</a>
+      </th>
+    </tr>
+  </tbody>
+</table>
