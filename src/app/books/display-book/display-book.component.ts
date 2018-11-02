@@ -27,6 +27,8 @@ export class DisplayBookComponent implements OnInit {
     this.books =this.store.pipe(select(fromBook.getBooks))
     console.log(this.books);
     this.error$ = this.store.pipe(select(fromBook.getBooksError));
+    // this is used to subscribe the store from anywhere without calling the server again
+    // this.store.subscribe((res:any)=> console.log(res)) 
   }
 
   deleteBook(book: Book) {
